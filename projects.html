@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Aquatica</title>
+  <meta name="description" content="Aquatica's field projects: reef restoration, river clean-ups, wetland recovery and safe drinking water.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.remove("no-js")</script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/projects.js" defer></script>
+</head>
+<body data-max-depth="200">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="hero page-hero">
+      <div class="hero-inner">
+        <span class="eyebrow reveal">Projects</span>
+        <h1 class="reveal" style="--delay:.1s">From <span class="shimmer">source to sea</span></h1>
+        <p class="lead reveal" style="--delay:.2s">Water flows through every ecosystem, so our work does too. Explore the projects our teams and volunteers are running right now.</p>
+      </div>
+      <div class="waves" aria-hidden="true">
+        <svg class="w1" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 60 Q 360 10 720 60 T 1440 60 T 2160 60 T 2880 60 V110 H0Z" fill="#6ee7f9"/></svg>
+        <svg class="w2" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 70 Q 240 30 480 70 T 960 70 T 1440 70 T 1920 70 T 2400 70 T 2880 70 V110 H0Z" fill="#2ec4b6"/></svg>
+        <svg class="w3" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 85 Q 480 55 960 85 T 1920 85 T 2880 85 V110 H0Z" fill="#02223f"/></svg>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="eyebrow">How we work</span>
+        <h2>The journey of a drop</h2>
+        <p class="lead">Select a stage to see how we protect water along its path.</p>
+      </div>
+      <div class="journey reveal">
+        <div class="journey-track" role="tablist" aria-label="Water journey stages">
+          <button class="journey-stop" role="tab" aria-selected="true" data-stage="0"><span>⛰️</span>Source</button>
+          <button class="journey-stop" role="tab" aria-selected="false" data-stage="1"><span>🏞️</span>River</button>
+          <button class="journey-stop" role="tab" aria-selected="false" data-stage="2"><span>🌾</span>Wetland</button>
+          <button class="journey-stop" role="tab" aria-selected="false" data-stage="3"><span>🏙️</span>City</button>
+          <button class="journey-stop" role="tab" aria-selected="false" data-stage="4"><span>🌊</span>Ocean</button>
+          <div class="journey-drop" aria-hidden="true">💧</div>
+        </div>
+        <div class="card journey-panel" role="tabpanel" aria-live="polite" id="journey-panel"></div>
+      </div>
+    </section>
+
+    <section class="section" id="list">
+      <div class="section-head reveal">
+        <span class="eyebrow">Active projects</span>
+        <h2>Our work in the water</h2>
+      </div>
+      <div class="chips reveal" role="group" aria-label="Filter projects" id="project-filters">
+        <button class="chip" aria-pressed="true" data-filter="all">All</button>
+        <button class="chip" aria-pressed="false" data-filter="ocean">🌊 Ocean</button>
+        <button class="chip" aria-pressed="false" data-filter="river">🏞️ Rivers &amp; Lakes</button>
+        <button class="chip" aria-pressed="false" data-filter="ground">💧 Groundwater</button>
+        <button class="chip" aria-pressed="false" data-filter="community">🤝 Community</button>
+      </div>
+      <div class="search-row reveal">
+        <label class="sr-only" for="project-search">Search projects</label>
+        <input type="text" id="project-search" placeholder="Search projects, places, species…">
+      </div>
+      <div class="grid grid-3" id="project-grid"></div>
+      <p class="empty" id="project-empty" hidden>No projects match — try a different filter. 🐡</p>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>

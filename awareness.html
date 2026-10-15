@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awareness — Aquatica</title>
+  <meta name="description" content="Learn about the threats facing our water and oceans, bust common myths, test yourself and take the water pledge.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.remove("no-js")</script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/awareness.js" defer></script>
+</head>
+<body data-max-depth="6000">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="hero page-hero">
+      <div class="hero-inner">
+        <span class="eyebrow reveal">Awareness</span>
+        <h1 class="reveal" style="--delay:.1s">Know the water, <span class="shimmer">save the water</span></h1>
+        <p class="lead reveal" style="--delay:.2s">Most threats to our water are invisible from the shore. Here's what's happening below the surface — and what every one of us can do about it.</p>
+      </div>
+      <div class="waves" aria-hidden="true">
+        <svg class="w1" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 60 Q 360 10 720 60 T 1440 60 T 2160 60 T 2880 60 V110 H0Z" fill="#6ee7f9"/></svg>
+        <svg class="w2" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 70 Q 240 30 480 70 T 960 70 T 1440 70 T 1920 70 T 2400 70 T 2880 70 V110 H0Z" fill="#2ec4b6"/></svg>
+        <svg class="w3" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 85 Q 480 55 960 85 T 1920 85 T 2880 85 V110 H0Z" fill="#02223f"/></svg>
+      </div>
+    </section>
+
+    <section class="section" id="threats">
+      <div class="section-head reveal">
+        <span class="eyebrow">Threats</span>
+        <h2>What our waters are facing</h2>
+      </div>
+      <div class="chips reveal" role="tablist" aria-label="Threats" id="threat-tabs"></div>
+      <div class="card threat-panel reveal" id="threat-panel" role="tabpanel" aria-live="polite"></div>
+    </section>
+
+    <section class="section" id="myths">
+      <div class="section-head reveal">
+        <span class="eyebrow">Myth vs fact</span>
+        <h2>Flip the card, find the truth</h2>
+        <p class="lead">Tap or press Enter on a card to reveal the facts.</p>
+      </div>
+      <div class="grid grid-3" id="myth-grid"></div>
+    </section>
+
+    <section class="section" id="quiz">
+      <div class="section-head reveal">
+        <span class="eyebrow">Ocean quiz</span>
+        <h2>How deep is your knowledge?</h2>
+      </div>
+      <div class="card quiz reveal" id="quiz-box"></div>
+    </section>
+
+    <section class="section" id="actions">
+      <div class="section-head reveal">
+        <span class="eyebrow">What you can do</span>
+        <h2>Small actions, big currents</h2>
+      </div>
+      <div class="accordion reveal">
+        <details class="card" open><summary>🏠 At home</summary><ul class="check-list">
+          <li>Fix dripping taps — one drip per second wastes over 10,000 L a year.</li>
+          <li>Never pour oil, paint, medicines or chemicals down the drain.</li>
+          <li>Run washing machines and dishwashers only when full.</li>
+          <li>Choose phosphate-free, biodegradable cleaning products.</li></ul></details>
+        <details class="card"><summary>🛒 When shopping</summary><ul class="check-list">
+          <li>Carry a reusable bottle, bag and coffee cup.</li>
+          <li>Avoid products with microbeads and glitter made of plastic.</li>
+          <li>Choose certified sustainable seafood — or eat less of it.</li>
+          <li>Buy clothes made from natural fibres; synthetic fabrics shed microfibres in the wash.</li></ul></details>
+        <details class="card"><summary>🏖️ At the beach &amp; river</summary><ul class="check-list">
+          <li>Leave nothing behind — and pick up three pieces of litter you find.</li>
+          <li>Use reef-safe sunscreen without oxybenzone and octinoxate.</li>
+          <li>Never touch or stand on coral; keep your distance from wildlife.</li>
+          <li>Join a local clean-up — or start one!</li></ul></details>
+        <details class="card"><summary>📣 In your community</summary><ul class="check-list">
+          <li>Ask your local council about wastewater treatment and storm drain filters.</li>
+          <li>Support marine protected areas and river restoration plans.</li>
+          <li>Share what you learn — awareness spreads like ripples.</li>
+          <li>Vote for leaders who prioritise clean water.</li></ul></details>
+      </div>
+    </section>
+
+    <section class="section" id="pledge">
+      <div class="section-head reveal">
+        <span class="eyebrow">The water pledge</span>
+        <h2>Make a promise to the ocean</h2>
+        <p class="lead">Pick the commitments you'll keep. Every promise releases a fish into your pledge reef.</p>
+      </div>
+      <div class="grid grid-2 pledge-wrap">
+        <form class="card reveal" id="pledge-form">
+          <div class="field"><label for="pledge-name">Your first name (optional)</label><input type="text" id="pledge-name" maxlength="30" autocomplete="given-name" placeholder="e.g. Kai"></div>
+          <fieldset class="pledge-options"><legend>I promise to…</legend></fieldset>
+          <button class="btn" type="submit">🐠 Make my pledge</button>
+        </form>
+        <div class="card pledge-reef reveal" style="--delay:.1s">
+          <div class="pledge-tank" id="pledge-tank" aria-hidden="true"></div>
+          <p id="pledge-summary" aria-live="polite"></p>
+          <button class="btn ghost small" id="pledge-reset" type="button" hidden>Reset my pledges</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>

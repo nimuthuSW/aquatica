@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team — Aquatica</title>
+  <meta name="description" content="Meet the Aquatica crew of scientists, divers, engineers and organisers — and join us as a volunteer.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.remove("no-js")</script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/team.js" defer></script>
+</head>
+<body data-max-depth="40">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="hero page-hero">
+      <div class="hero-inner">
+        <span class="eyebrow reveal">Team</span>
+        <h1 class="reveal" style="--delay:.1s">Meet the <span class="shimmer">crew</span></h1>
+        <p class="lead reveal" style="--delay:.2s">Marine biologists, hydrologists, divers, engineers and community organisers — united by one current.</p>
+      </div>
+      <div class="waves" aria-hidden="true">
+        <svg class="w1" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 60 Q 360 10 720 60 T 1440 60 T 2160 60 T 2880 60 V110 H0Z" fill="#6ee7f9"/></svg>
+        <svg class="w2" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 70 Q 240 30 480 70 T 960 70 T 1440 70 T 1920 70 T 2400 70 T 2880 70 V110 H0Z" fill="#2ec4b6"/></svg>
+        <svg class="w3" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 85 Q 480 55 960 85 T 1920 85 T 2880 85 V110 H0Z" fill="#02223f"/></svg>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our people</span>
+        <h2>The hands behind the mission</h2>
+        <p class="lead">Hover or focus a card to meet each crew member's ocean spirit animal.</p>
+      </div>
+      <div class="chips reveal" role="group" aria-label="Filter team" id="team-filters">
+        <button class="chip" aria-pressed="true" data-filter="all">Everyone</button>
+        <button class="chip" aria-pressed="false" data-filter="lead">Leadership</button>
+        <button class="chip" aria-pressed="false" data-filter="science">Science</button>
+        <button class="chip" aria-pressed="false" data-filter="field">Field ops</button>
+        <button class="chip" aria-pressed="false" data-filter="community">Community</button>
+      </div>
+      <div class="grid grid-4" id="team-grid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our values</span>
+        <h2>What keeps us afloat</h2>
+      </div>
+      <div class="grid grid-4">
+        <div class="card float reveal"><div class="icon">🔬</div><h3>Science first</h3><p>Every project starts with data and is measured honestly — including what doesn't work.</p></div>
+        <div class="card float reveal" style="--delay:.08s"><div class="icon">🤝</div><h3>Local leadership</h3><p>Communities who live with the water lead the work; we bring tools and funding.</p></div>
+        <div class="card float reveal" style="--delay:.16s"><div class="icon">🌍</div><h3>Source to sea</h3><p>Rivers, groundwater and oceans are one system — so we protect them together.</p></div>
+        <div class="card float reveal" style="--delay:.24s"><div class="icon">🔍</div><h3>Transparency</h3><p>Open data, published results and clear accounts of every donation.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="join">
+      <div class="grid grid-2 join">
+        <div class="reveal">
+          <span class="eyebrow">Join the crew</span>
+          <h2>Dive in with us</h2>
+          <p class="lead">Whether you can give an afternoon at a beach clean-up or your professional skills, there's a place for you aboard.</p>
+          <ul class="check-list">
+            <li>Weekend river and beach clean-ups</li>
+            <li>Citizen science: water testing and wildlife surveys</li>
+            <li>Skilled volunteering: design, data, engineering, law</li>
+            <li>School ambassadors for Blue Classrooms</li>
+          </ul>
+        </div>
+        <form class="card reveal" id="join-form" style="--delay:.1s" novalidate>
+          <div class="field"><label for="j-name">Name</label><input type="text" id="j-name" required autocomplete="name"></div>
+          <div class="field"><label for="j-email">Email</label><input type="email" id="j-email" required autocomplete="email"></div>
+          <div class="field"><label for="j-role">I'd like to help with</label>
+            <select id="j-role"><option>Clean-ups</option><option>Citizen science</option><option>Skilled volunteering</option><option>School ambassador</option><option>Something else</option></select></div>
+          <div class="field"><label for="j-msg">Tell us a little about yourself</label><textarea id="j-msg" rows="3"></textarea></div>
+          <p class="form-error" id="join-error" role="alert"></p>
+          <button class="btn" type="submit">Send application 🌊</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>

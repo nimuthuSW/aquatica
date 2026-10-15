@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aquatica — Protecting Water &amp; Oceans</title>
+  <meta name="description" content="Aquatica protects rivers, lakes, groundwater and oceans through restoration projects, research and community action.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.remove("no-js")</script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+<body data-max-depth="3700">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow reveal">Every drop is connected</span>
+        <h1 class="reveal" style="--delay:.1s">Dive in to protect <span class="shimmer">our blue planet</span></h1>
+        <p class="lead reveal" style="--delay:.2s">Aquatica restores rivers, safeguards groundwater and defends ocean life — from the first mountain spring to the deepest trench. Scroll down and descend with us.</p>
+        <div class="hero-actions reveal" style="--delay:.3s">
+          <a class="btn" href="projects.html">Explore our projects →</a>
+          <a class="btn ghost" href="awareness.html#pledge">Take the pledge</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#impact"><span class="mouse"></span>Descend</a>
+      <div class="waves" aria-hidden="true">
+        <svg class="w1" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 60 Q 360 10 720 60 T 1440 60 T 2160 60 T 2880 60 V110 H0Z" fill="#6ee7f9"/></svg>
+        <svg class="w2" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 70 Q 240 30 480 70 T 960 70 T 1440 70 T 1920 70 T 2400 70 T 2880 70 V110 H0Z" fill="#2ec4b6"/></svg>
+        <svg class="w3" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 85 Q 480 55 960 85 T 1920 85 T 2880 85 V110 H0Z" fill="#02223f"/></svg>
+      </div>
+    </section>
+
+    <section class="section" id="impact">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our impact so far</span>
+        <h2>Ripples that became waves</h2>
+        <p class="lead">Measured results from our field teams and volunteer network.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card stat reveal"><div class="num" data-count="482" data-suffix="t">0</div><div class="label">waste removed from waterways</div></div>
+        <div class="card stat reveal" style="--delay:.1s"><div class="num" data-count="126">0</div><div class="label">km of riverbank restored</div></div>
+        <div class="card stat reveal" style="--delay:.2s"><div class="num" data-count="38">0</div><div class="label">communities with safe water access</div></div>
+        <div class="card stat reveal" style="--delay:.3s"><div class="num" data-count="15400">0</div><div class="label">volunteers mobilised</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="eyebrow">Navigate the depths</span>
+        <h2>Where would you like to dive?</h2>
+      </div>
+      <div class="grid grid-3 explore">
+        <a class="card float reveal" href="projects.html"><div class="icon">🐢</div><h3>Projects</h3><p>Reef nurseries, river clean-ups, wetland rebuilding and clean-water wells.</p><span class="more">Dive in →</span></a>
+        <a class="card float reveal" style="--delay:.08s" href="statistics.html"><div class="icon">📊</div><h3>Statistics</h3><p>Interactive charts on plastic, freshwater scarcity and ocean health — plus your water footprint.</p><span class="more">Dive in →</span></a>
+        <a class="card float reveal" style="--delay:.16s" href="awareness.html"><div class="icon">🌊</div><h3>Awareness</h3><p>Threats facing our waters, myths vs facts, a quiz, and everyday actions that matter.</p><span class="more">Dive in →</span></a>
+        <a class="card float reveal" style="--delay:.24s" href="team.html"><div class="icon">🤿</div><h3>Team</h3><p>Meet the scientists, divers and organisers behind the mission — and join the crew.</p><span class="more">Dive in →</span></a>
+        <a class="card float reveal" style="--delay:.32s" href="goals.html"><div class="icon">🎯</div><h3>Goals</h3><p>Our roadmap to 2030, aligned with the UN goals for clean water and life below water.</p><span class="more">Dive in →</span></a>
+        <a class="card float reveal" style="--delay:.4s" href="awareness.html#pledge"><div class="icon">💧</div><h3>Pledge</h3><p>Make a personal promise for water — and watch the community ocean fill up.</p><span class="more">Dive in →</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="cleanup">
+      <div class="section-head reveal">
+        <span class="eyebrow">Try it yourself</span>
+        <h2>Clean up the bay</h2>
+        <p class="lead">Trash is drifting into the reef! Tap each piece to scoop it out before the timer runs out, and watch marine life return.</p>
+      </div>
+      <div class="bay reveal" id="bay">
+        <div class="bay-hud">
+          <span>🗑️ <strong id="bay-count">0</strong> / <span id="bay-total">12</span> collected</span>
+          <span>⏱️ <strong id="bay-time">30</strong>s</span>
+          <button class="btn" id="bay-start">Start clean-up</button>
+        </div>
+        <div class="bay-water" id="bay-water" aria-live="polite">
+          <div class="bay-reef" aria-hidden="true">🪸🐚🪸🌿🪸🐚🌿🪸</div>
+          <p class="bay-msg" id="bay-msg">Press <strong>Start clean-up</strong> to begin.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card quote reveal">
+        <p class="big-quote">“With every drop of water you drink, every breath you take, you're connected to the sea.”</p>
+        <p class="source">— Sylvia Earle, oceanographer</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>

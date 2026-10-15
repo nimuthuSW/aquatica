@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Statistics — Aquatica</title>
+  <meta name="description" content="Interactive statistics on freshwater, ocean plastic and ocean health, plus a personal water footprint calculator.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.remove("no-js")</script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/statistics.js" defer></script>
+</head>
+<body data-max-depth="1000">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="hero page-hero">
+      <div class="hero-inner">
+        <span class="eyebrow reveal">Statistics</span>
+        <h1 class="reveal" style="--delay:.1s">The numbers <span class="shimmer">beneath the surface</span></h1>
+        <p class="lead reveal" style="--delay:.2s">Data tells the story of our waters — what we have, what we're losing, and where we can still turn the tide.</p>
+      </div>
+      <div class="waves" aria-hidden="true">
+        <svg class="w1" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 60 Q 360 10 720 60 T 1440 60 T 2160 60 T 2880 60 V110 H0Z" fill="#6ee7f9"/></svg>
+        <svg class="w2" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 70 Q 240 30 480 70 T 960 70 T 1440 70 T 1920 70 T 2400 70 T 2880 70 V110 H0Z" fill="#2ec4b6"/></svg>
+        <svg class="w3" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 85 Q 480 55 960 85 T 1920 85 T 2880 85 V110 H0Z" fill="#02223f"/></svg>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="eyebrow">At a glance</span>
+        <h2>The state of our waters</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card stat reveal"><div class="num" data-count="2.2" data-decimals="1" data-suffix=" bn">0</div><div class="label">people lack safely managed drinking water</div><p class="source">WHO/UNICEF JMP, 2023</p></div>
+        <div class="card stat reveal" style="--delay:.08s"><div class="num" data-count="11" data-suffix=" Mt">0</div><div class="label">of plastic enter the ocean each year</div><p class="source">Pew &amp; SYSTEMIQ, 2020</p></div>
+        <div class="card stat reveal" style="--delay:.16s"><div class="num" data-count="90" data-suffix="%">0</div><div class="label">of excess heat from global warming absorbed by the ocean</div><p class="source">IPCC AR6</p></div>
+        <div class="card stat reveal"><div class="num" data-count="50" data-suffix="%">0</div><div class="label">of Earth's oxygen produced by ocean life (est.)</div><p class="source">NOAA</p></div>
+        <div class="card stat reveal" style="--delay:.08s"><div class="num" data-count="35" data-suffix="%">0</div><div class="label">of assessed fish stocks are overfished</div><p class="source">FAO SOFIA, 2022</p></div>
+        <div class="card stat reveal" style="--delay:.16s"><div class="num" data-count="14" data-suffix="%">0</div><div class="label">of the world's coral lost between 2009 and 2018</div><p class="source">GCRMN, 2020</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid grid-2">
+        <div class="card chart-card reveal" id="donut-card">
+          <span class="eyebrow">Earth's water</span>
+          <h3>How much water can we actually use?</h3>
+          <p class="chart-help">Toggle the view to zoom into freshwater.</p>
+          <div class="chips small-chips" role="group" aria-label="Water view">
+            <button class="chip" aria-pressed="true" data-view="all">All water</button>
+            <button class="chip" aria-pressed="false" data-view="fresh">Freshwater only</button>
+          </div>
+          <div class="donut-wrap"><svg id="donut" viewBox="0 0 220 220" role="img" aria-labelledby="donut-title"><title id="donut-title">Distribution of Earth's water</title></svg><div class="donut-center" id="donut-center"></div></div>
+          <ul class="legend" id="donut-legend"></ul>
+          <p class="source">Source: USGS, after Gleick (1996). Rounded.</p>
+        </div>
+
+        <div class="card chart-card reveal" style="--delay:.1s" id="bars-card">
+          <span class="eyebrow">Freshwater use</span>
+          <h3>Where does our freshwater go?</h3>
+          <p class="chart-help">Share of global freshwater withdrawals by sector. Hover a bar for detail.</p>
+          <div class="hbars" id="hbars"></div>
+          <p class="source">Source: FAO AQUASTAT. Rounded.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card chart-card reveal" id="line-card">
+        <span class="eyebrow">Plastic tide</span>
+        <h3>Global plastic production, 1950 → 2019</h3>
+        <p class="chart-help">Million tonnes per year. Move along the line to explore — production has grown more than 200-fold.</p>
+        <div class="line-wrap"><svg id="line" viewBox="0 0 800 340" role="img" aria-labelledby="line-title"><title id="line-title">Global plastic production rising from 2 million tonnes in 1950 to about 460 million tonnes in 2019</title></svg></div>
+        <p class="source">Sources: Geyer, Jambeck &amp; Law (2017); OECD Global Plastics Outlook (2022). Approximate.</p>
+      </div>
+    </section>
+
+    <section class="section" id="calculator">
+      <div class="section-head reveal">
+        <span class="eyebrow">Your water footprint</span>
+        <h2>How much water do you use?</h2>
+        <p class="lead">Direct use is just the tip of the iceberg — the food we eat hides far more “virtual water”. Adjust the sliders for a rough daily estimate.</p>
+      </div>
+      <div class="calc reveal">
+        <form class="card calc-form" id="calc-form">
+          <div class="field"><label for="c-shower">🚿 Shower minutes per day: <output data-for="c-shower"></output></label><input type="range" id="c-shower" min="0" max="30" value="8"></div>
+          <div class="field"><label for="c-flush">🚽 Toilet flushes per day: <output data-for="c-flush"></output></label><input type="range" id="c-flush" min="0" max="15" value="5"></div>
+          <div class="field"><label for="c-laundry">👕 Laundry loads per week: <output data-for="c-laundry"></output></label><input type="range" id="c-laundry" min="0" max="14" value="3"></div>
+          <div class="field"><label for="c-dishes">🍽️ Dishes</label>
+            <select id="c-dishes"><option value="40">Efficient dishwasher</option><option value="100" selected>Washing by hand, tap running</option><option value="60">Washing by hand, basin</option></select></div>
+          <div class="field"><label for="c-diet">🥗 Diet</label>
+            <select id="c-diet"><option value="5000">Meat with most meals</option><option value="3600" selected>Mixed diet</option><option value="2600">Vegetarian</option><option value="2100">Plant-based</option></select></div>
+        </form>
+        <div class="card calc-result" aria-live="polite">
+          <div class="tank" aria-hidden="true"><div class="tank-water" id="tank-water"><svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M0 10 Q 25 0 50 10 T 100 10 T 150 10 T 200 10 V20 H0Z" fill="rgba(110,231,249,.9)"/></svg></div></div>
+          <div class="calc-total"><span id="calc-total">0</span> L / day</div>
+          <div class="calc-split"><span>Direct use: <strong id="calc-direct">0</strong> L</span><span>Food (virtual): <strong id="calc-virtual">0</strong> L</span></div>
+          <p id="calc-tip" class="calc-tip"></p>
+          <p class="source">Estimates only: shower ≈ 9 L/min, flush ≈ 6 L, laundry ≈ 60 L/load; diet values after the Water Footprint Network.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="chart-tooltip" id="tooltip" role="status" hidden></div>
+  <footer id="site-footer"></footer>
+</body>
+</html>
