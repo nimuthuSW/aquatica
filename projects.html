@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects — Aquatica</title>
   <meta name="description" content="Aquatica's field projects: reef restoration, river clean-ups, wetland recovery and safe drinking water.">
+  <link rel="canonical" href="https://aquatica.rakkora.org/projects.html">
+  <link rel="preload" as="image" href="assets/images/proj-reef.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aquatica">
+  <meta property="og:title" content="Projects — Aquatica">
+  <meta property="og:description" content="Aquatica's field projects: reef restoration, river clean-ups, wetland recovery and safe drinking water.">
+  <meta property="og:url" content="https://aquatica.rakkora.org/projects.html">
+  <meta property="og:image" content="https://aquatica.rakkora.org/assets/images/proj-reef.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects — Aquatica">
+  <meta name="twitter:description" content="Aquatica's field projects: reef restoration, river clean-ups, wetland recovery and safe drinking water.">
+  <meta name="twitter:image" content="https://aquatica.rakkora.org/assets/images/proj-reef.webp">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +33,7 @@
 
   <main id="main">
     <section class="hero page-hero">
-      <div class="hero-photo" style="background-image:url('assets/images/proj-reef.jpg')" aria-hidden="true"></div>
+      <div class="hero-photo" style="background-image:url('assets/images/proj-reef.webp')" aria-hidden="true"></div>
       <div class="hero-inner">
         <span class="eyebrow reveal">Projects</span>
         <h1 class="reveal" style="--delay:.1s">From <span class="shimmer">source to sea</span></h1>
@@ -50,6 +62,18 @@
           <div class="journey-drop" aria-hidden="true">💧</div>
         </div>
         <div class="card journey-panel" role="tabpanel" aria-live="polite" id="journey-panel"></div>
+      </div>
+    </section>
+
+    <section class="section" id="world-map-section">
+      <div class="section-head reveal">
+        <span class="eyebrow">Global footprint</span>
+        <h2>Where our teams are working</h2>
+        <p class="lead">Select a glowing marker on the map to inspect a field site and open its project details.</p>
+      </div>
+      <div class="card map-card reveal">
+        <div class="world-map-wrap" id="world-map" role="region" aria-label="Interactive world map of Aquatica projects"></div>
+        <div class="map-preview" id="map-preview" aria-live="polite"></div>
       </div>
     </section>
 

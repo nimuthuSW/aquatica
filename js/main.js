@@ -67,7 +67,31 @@
           <li><a href="team.html#join">Volunteer</a></li>
         </ul></div>
       </div>
-      <div class="footer-bottom"><span>© ${new Date().getFullYear()} Aquatica. Every drop counts.</span><span>Aligned with UN SDG 6 (Clean Water) &amp; SDG 14 (Life Below Water)</span></div>`;
+      <div class="footer-bottom">
+        <span>© ${new Date().getFullYear()} Aquatica. Every drop counts.</span>
+        <span>Aligned with UN SDG 6 &amp; SDG 14 · <button type="button" id="photo-credits-btn" style="background:none;border:0;padding:0;color:var(--aqua);font:inherit;cursor:pointer;text-decoration:underline">Photo credits</button></span>
+      </div>`;
+    const creditsBtn = document.getElementById("photo-credits-btn");
+    if (creditsBtn) {
+      creditsBtn.addEventListener("click", () => {
+        window.Aquatica.modal(`
+          <span class="tag">Attribution</span>
+          <h2 style="margin-top:10px">Global Photography Credits</h2>
+          <p style="color:var(--text-dim)">Real-world photography across Aquatica is sourced from Wikimedia Commons under Creative Commons (CC0, CC BY, CC BY-SA) and Public Domain licenses:</p>
+          <ul class="check-list" style="font-size:.9rem;color:var(--text-dim)">
+            <li><strong>Great Barrier Reef (Flynn Reef)</strong> — Coral Outcrop Flynn Reef (Wikimedia Commons)</li>
+            <li><strong>Raja Ampat, Indonesia</strong> — Coral table in Raja Ampat, Papua (CC BY 2.0)</li>
+            <li><strong>Lake Baikal, Russia</strong> — Clear water of Lake Baikal (CC BY 2.0)</li>
+            <li><strong>Mekong Delta, Vietnam</strong> — Mekong River in Vietnam (CC BY 4.0)</li>
+            <li><strong>Patagonia, Chile</strong> — Leones Glacier Lake (CC BY 4.0)</li>
+            <li><strong>Geirangerfjord, Norway</strong> — Sunset in Geirangerfjord (CC BY 3.0)</li>
+            <li><strong>Okavango Delta, Botswana</strong> — Aerial view of Okavango Delta (CC BY-SA 4.0)</li>
+            <li><strong>Sundarbans, Bangladesh</strong> — Sundarbans Mangrove Forest (CC BY 2.0)</li>
+            <li><strong>Maldives &amp; Costa Rica</strong> — Olive Ridley Project Ghost Net &amp; Sea Turtle Hatchlings (CC BY-SA 4.0 / CC BY 4.0)</li>
+            <li><strong>Klang River &amp; Global Threats</strong> — River Interceptor, Lake Victoria, Johad Rajasthan, Averno Lake, Peruvian Coast &amp; NOAA/USGS Public Domain archives</li>
+          </ul>`);
+      });
+    }
   }
 
   function buildOcean() {

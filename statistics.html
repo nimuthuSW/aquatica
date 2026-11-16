@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Statistics — Aquatica</title>
   <meta name="description" content="Interactive statistics on freshwater, ocean plastic and ocean health, plus a personal water footprint calculator.">
+  <link rel="canonical" href="https://aquatica.rakkora.org/statistics.html">
+  <link rel="preload" as="image" href="assets/images/world-baikal.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aquatica">
+  <meta property="og:title" content="Statistics — Aquatica">
+  <meta property="og:description" content="Interactive statistics on freshwater, ocean plastic and ocean health, plus live marine telemetry and water footprint calculator.">
+  <meta property="og:url" content="https://aquatica.rakkora.org/statistics.html">
+  <meta property="og:image" content="https://aquatica.rakkora.org/assets/images/world-baikal.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Statistics — Aquatica">
+  <meta name="twitter:description" content="Interactive statistics on freshwater, ocean plastic and ocean health, plus live marine telemetry and water footprint calculator.">
+  <meta name="twitter:image" content="https://aquatica.rakkora.org/assets/images/world-baikal.webp">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +33,7 @@
 
   <main id="main">
     <section class="hero page-hero">
-      <div class="hero-photo" style="background-image:url('assets/images/world-baikal.jpg')" aria-hidden="true"></div>
+      <div class="hero-photo" style="background-image:url('assets/images/world-baikal.webp')" aria-hidden="true"></div>
       <div class="hero-inner">
         <span class="eyebrow reveal">Statistics</span>
         <h1 class="reveal" style="--delay:.1s">The numbers <span class="shimmer">beneath the surface</span></h1>
@@ -82,6 +94,15 @@
         <div class="line-wrap"><svg id="line" viewBox="0 0 800 340" role="img" aria-labelledby="line-title"><title id="line-title">Global plastic production rising from 2 million tonnes in 1950 to about 460 million tonnes in 2019</title></svg></div>
         <p class="source">Sources: Geyer, Jambeck &amp; Law (2017); OECD Global Plastics Outlook (2022). Approximate.</p>
       </div>
+    </section>
+
+    <section class="section" id="telemetry">
+      <div class="section-head reveal">
+        <span class="eyebrow">Live ocean telemetry</span>
+        <h2>Real-time marine conditions</h2>
+        <p class="lead">Live wave height and sea surface temperature at four Aquatica reef &amp; coastal monitoring stations, powered by Open-Meteo Marine.</p>
+      </div>
+      <div class="grid grid-2" id="telemetry-grid"></div>
     </section>
 
     <section class="section" id="calculator">

@@ -5,22 +5,22 @@
 
   /* ---------- Threats ---------- */
   const THREATS = [
-    { icon: "🛍️", name: "Plastic pollution", severity: 90, img: "assets/images/threat-plastic.jpg", caption: "Oregon Coast, USA",
+    { icon: "🛍️", name: "Plastic pollution", severity: 90, img: "assets/images/threat-plastic.webp", caption: "Oregon Coast, USA",
       text: "Around 11 million tonnes of plastic enter the ocean each year. It breaks into microplastics that are now found from Arctic ice to the deepest trenches — and inside fish, birds and people.",
       impacts: ["Entanglement and ingestion by wildlife", "Microplastics in the food chain", "Toxic additives leach into water"] },
-    { icon: "🧪", name: "Chemical & nutrient runoff", severity: 80, img: "assets/images/threat-runoff.jpg", caption: "Lake Averno, Italy",
+    { icon: "🧪", name: "Chemical & nutrient runoff", severity: 80, img: "assets/images/threat-runoff.webp", caption: "Lake Averno, Italy",
       text: "Fertilisers, pesticides, sewage and industrial waste wash into rivers and coasts. Excess nutrients trigger algal blooms that strip oxygen from water, creating ‘dead zones’ where little can survive.",
       impacts: ["Hundreds of coastal dead zones worldwide", "Toxic algae poison drinking water", "Fish kills and lost livelihoods"] },
-    { icon: "🎣", name: "Overfishing", severity: 75, img: "assets/images/threat-overfishing.jpg", caption: "North Atlantic",
+    { icon: "🎣", name: "Overfishing", severity: 75, img: "assets/images/threat-overfishing.webp", caption: "North Atlantic",
       text: "More than a third of assessed fish stocks are fished faster than they can recover. Destructive methods like bottom trawling also damage the seafloor, and bycatch kills turtles, dolphins and sharks.",
       impacts: ["Collapsing fish populations", "Food insecurity for coastal communities", "Disrupted marine food webs"] },
-    { icon: "🌡️", name: "Warming & acidification", severity: 95, img: "assets/images/threat-bleaching.jpg", caption: "Coral bleaching event",
+    { icon: "🌡️", name: "Warming & acidification", severity: 95, img: "assets/images/threat-bleaching.webp", caption: "Coral bleaching event",
       text: "The ocean absorbs about a quarter of our CO₂ emissions and most of the extra heat. Warmer water bleaches coral, while CO₂ makes seawater more acidic, making it harder for shellfish and coral to build skeletons.",
       impacts: ["Mass coral bleaching events", "Sea-level rise and stronger storms", "Species shifting toward the poles"] },
-    { icon: "🛢️", name: "Oil spills", severity: 60, img: "assets/images/threat-oil.jpg", caption: "Peruvian Coast",
+    { icon: "🛢️", name: "Oil spills", severity: 60, img: "assets/images/threat-oil.webp", caption: "Peruvian Coast",
       text: "Large tanker spills make headlines, but most oil reaches the sea from everyday sources: land runoff, shipping and leaking infrastructure. Oil smothers wildlife and lingers in sediments for decades.",
       impacts: ["Coated birds and marine mammals", "Contaminated beaches and fisheries", "Long-term damage to mangroves and marshes"] },
-    { icon: "🏜️", name: "Over-extraction", severity: 70, img: "assets/images/threat-drought.jpg", caption: "California Dry Lakebed, USA",
+    { icon: "🏜️", name: "Over-extraction", severity: 70, img: "assets/images/threat-drought.webp", caption: "California Dry Lakebed, USA",
       text: "We pump groundwater faster than rain refills it in many regions. Rivers run dry before reaching the sea, wetlands vanish and coastal aquifers turn salty as seawater seeps in.",
       impacts: ["Falling water tables and dry wells", "Land subsidence", "Saltwater intrusion into drinking water"] },
   ];

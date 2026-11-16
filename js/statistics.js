@@ -195,4 +195,41 @@
   }
   form.addEventListener("input", calc);
   calc();
+
+  /* ---------- Live marine telemetry (Open-Meteo Marine API) ---------- */
+  const tGrid = document.getElementById("telemetry-grid");
+  if (tGrid) {
+    const STATIONS = [
+      { name: "Great Barrier Reef", region: "Queensland, Australia", lat: -16.7, lon: 146.3, fallbackWave: "1.1 m", fallbackTemp: "26.4 °C" },
+      { name: "Raja Ampat", region: "West Papua, Indonesia", lat: -0.5, lon: 130.5, fallbackWave: "0.6 m", fallbackTemp: "29.1 °C" },
+      { name: "Maldives Atoll", region: "Indian Ocean", lat: 3.2, lon: 73.2, fallbackWave: "1.3 m", fallbackTemp: "28.7 °C" },
+      { name: "Osa Peninsula", region: "Pacific Coast, Costa Rica", lat: 8.5, lon: -83.5, fallbackWave: "1.5 m", fallbackTemp: "27.8 °C" },
+    ];
+    const renderStation = (s, wave, temp, live) => `
+      <article class="card float telemetry-card reveal visible">
+        <div class="telemetry-head">
+          <div><h3>${s.name}</h3><p class="place" style="margin:0">📍 ${s.region}</p></div>
+          <span class="telemetry-status">${live ? "● Live" : "Baseline"}</span>
+        </div>
+        <div class="telemetry-metrics">
+          <div class="telemetry-metric"><span>Wave height</span><strong>${wave}</strong></div>
+          <div class="telemetry-metric"><span>Sea surface temp</span><strong>${temp}</strong></div>
+        </div>
+      </article>`;
+    tGrid.innerHTML = STATIONS.map((s) => renderStation(s, s.fallbackWave, s.fallbackTemp, false)).join("");
+    Promise.all(STATIONS.map(async (s) => {
+      try {
+        const url = `https://marine-api.open-meteo.com/v1/marine?latitude=${s.lat}&longitude=${s.lon}&current=wave_height,sea_surface_temperature`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
+        const c = data.current || {};
+        const w = c.wave_height != null ? `${Number(c.wave_height).toFixed(1)} m` : s.fallbackWave;
+        const t = c.sea_surface_temperature != null ? `${Number(c.sea_surface_temperature).toFixed(1)} °C` : s.fallbackTemp;
+        return renderStation(s, w, t, c.wave_height != null || c.sea_surface_temperature != null);
+      } catch {
+        return renderStation(s, s.fallbackWave, s.fallbackTemp, false);
+      }
+    })).then((cards) => { tGrid.innerHTML = cards.join(""); });
+  }
 })();
