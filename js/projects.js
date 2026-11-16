@@ -172,25 +172,23 @@
     if (p) openModal(p);
   });
 
-  /* ---------- Interactive World Map ---------- */
+  /* ---------- Real Interactive World Map (Leaflet) ---------- */
   const mapEl = document.getElementById("world-map");
   const previewEl = document.getElementById("map-preview");
-  function proj(lat, lon) {
-    return [((lon + 180) * 1000 / 360).toFixed(1), ((90 - lat) * 500 / 180).toFixed(1)];
-  }
-  const CONTINENTS = [
-    "M85,95 L180,70 L285,85 L270,135 L230,175 L200,210 L175,205 L145,175 L105,150 Z", // North America
-    "M215,235 L270,245 L305,290 L285,365 L250,435 L235,430 L230,360 L205,295 Z", // South America
-    "M440,85 L525,75 L560,115 L545,155 L485,165 L445,150 Z", // Europe
-    "M450,180 L530,175 L590,225 L575,305 L535,380 L495,370 L470,295 L435,235 Z", // Africa
-    "M565,75 L775,65 L895,105 L875,180 L815,215 L750,235 L685,220 L620,205 L565,160 Z", // Asia
-    "M785,295 L875,290 L895,355 L845,385 L780,360 Z", // Australia
-    "M310,35 L395,30 L385,75 L325,80 Z", // Greenland
-  ];
-  function showPin(id) {
+  const markers = {};
+  let leafletMap = null;
+
+  function showPin(id, pan) {
     const p = PROJECTS.find((x) => x.id === id) || PROJECTS[0];
-    if (!mapEl || !previewEl) return;
-    mapEl.querySelectorAll(".map-pin").forEach((el) => el.classList.toggle("active", el.dataset.pin === p.id));
+    if (!previewEl) return;
+    Object.entries(markers).forEach(([k, m]) => {
+      const el = m.getElement();
+      if (el) {
+        const pin = el.querySelector(".aq-pin");
+        if (pin) pin.classList.toggle("active", k === p.id);
+      }
+    });
+    if (pan && leafletMap) leafletMap.panTo([p.lat, p.lon], { animate: true });
     previewEl.innerHTML = `
       <img class="map-preview-img" src="${p.img}" alt="${p.title} in ${p.place}">
       <span class="tag">${CAT_LABEL[p.cat]}</span>
@@ -201,24 +199,45 @@
       <button class="btn small" type="button" id="map-open-btn">Explore project →</button>`;
     document.getElementById("map-open-btn").addEventListener("click", () => openModal(p));
   }
-  if (mapEl && previewEl) {
-    const gridLines = [100, 200, 300, 400].map((y) => `<line class="map-grid-line" x1="0" y1="${y}" x2="1000" y2="${y}"/>`).join("") +
-      [200, 400, 600, 800].map((x) => `<line class="map-grid-line" x1="${x}" y1="0" x2="${x}" y2="500"/>`).join("");
-    const lands = CONTINENTS.map((d) => `<path class="map-land" d="${d}"/>`).join("");
-    const pins = PROJECTS.map((p) => {
-      const [x, y] = proj(p.lat, p.lon);
-      return `<g class="map-pin" data-pin="${p.id}" tabindex="0" role="button" aria-label="${p.title} in ${p.place}">
-        <circle class="pin-pulse" cx="${x}" cy="${y}" r="10"/>
-        <circle class="pin-dot" cx="${x}" cy="${y}" r="6"/>
-        <title>${p.title} — ${p.place}</title>
-      </g>`;
-    }).join("");
-    mapEl.innerHTML = `<svg class="world-map-svg" viewBox="0 0 1000 500" role="img" aria-label="World map with Aquatica field project pins">${gridLines}${lands}${pins}</svg>`;
-    mapEl.querySelectorAll(".map-pin").forEach((pin) => {
-      pin.addEventListener("click", () => showPin(pin.dataset.pin));
-      pin.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showPin(pin.dataset.pin); } });
+
+  if (mapEl && previewEl && typeof window.L !== "undefined") {
+    leafletMap = window.L.map(mapEl, {
+      center: [12, 20],
+      zoom: 2,
+      minZoom: 2,
+      maxZoom: 12,
+      worldCopyJump: true,
+      scrollWheelZoom: false,
     });
-    showPin(PROJECTS[0].id);
+    const darkOcean = window.L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+      attribution: "&copy; OpenStreetMap &copy; CARTO",
+      subdomains: "abcd",
+      maxZoom: 19,
+    }).addTo(leafletMap);
+    const satellite = window.L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+      attribution: "Tiles &copy; Esri",
+      maxZoom: 18,
+    });
+    const street = window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap contributors",
+      maxZoom: 19,
+    });
+    window.L.control.layers({ "Dark Ocean": darkOcean, "Satellite": satellite, "Terrain": street }, null, { position: "topright" }).addTo(leafletMap);
+
+    PROJECTS.forEach((p) => {
+      const icon = window.L.divIcon({
+        className: "leaflet-aquatica-pin",
+        html: `<div class="aq-pin" title="${p.title} — ${p.place}"><span class="aq-pin-core">${p.icon}</span></div>`,
+        iconSize: [32, 32],
+        iconAnchor: [16, 16],
+      });
+      const marker = window.L.marker([p.lat, p.lon], { icon, title: `${p.title} (${p.place})` }).addTo(leafletMap);
+      marker.on("click", () => showPin(p.id, true));
+      markers[p.id] = marker;
+    });
+    showPin(PROJECTS[0].id, false);
+  } else if (previewEl) {
+    showPin(PROJECTS[0].id, false);
   }
 
   render();

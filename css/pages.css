@@ -269,16 +269,18 @@
 /* ---------- World Map & Telemetry ---------- */
 .map-card { display: grid; grid-template-columns: 1.6fr 1fr; gap: 24px; align-items: center; }
 @media (max-width: 860px) { .map-card { grid-template-columns: 1fr; } }
-.world-map-wrap { position: relative; border-radius: 16px; overflow: hidden; background: radial-gradient(circle at 50% 45%, rgba(10, 106, 161, .35), rgba(1, 14, 28, .85)); border: 1px solid var(--glass-border); }
-.world-map-svg { display: block; width: 100%; height: auto; }
-.map-land { fill: rgba(46, 196, 182, .18); stroke: rgba(110, 231, 249, .32); stroke-width: 1; }
-.map-grid-line { stroke: rgba(160, 240, 255, .07); stroke-width: 1; }
-.map-pin { cursor: pointer; outline: none; }
-.map-pin .pin-pulse { fill: rgba(110, 231, 249, .28); transform-box: fill-box; transform-origin: center; animation: pin-pulse 2.4s ease-out infinite; }
-.map-pin .pin-dot { fill: var(--aqua); stroke: var(--abyss); stroke-width: 2; transition: transform .2s, fill .2s; transform-box: fill-box; transform-origin: center; }
-.map-pin:hover .pin-dot, .map-pin:focus .pin-dot, .map-pin.active .pin-dot { fill: var(--sand); transform: scale(1.35); }
-.map-pin.active .pin-pulse { fill: rgba(246, 214, 143, .38); }
-@keyframes pin-pulse { 0% { transform: scale(.8); opacity: .9; } 100% { transform: scale(2.4); opacity: 0; } }
+.world-map-wrap { position: relative; height: 440px; border-radius: 16px; overflow: hidden; background: #04192e; border: 1px solid var(--glass-border); z-index: 1; }
+@media (max-width: 600px) { .world-map-wrap { height: 340px; } }
+.leaflet-container { font-family: var(--font-body); background: #04192e; }
+.leaflet-control-layers, .leaflet-bar a { background: rgba(2, 24, 48, .88) !important; color: var(--foam) !important; border-color: var(--glass-border) !important; backdrop-filter: blur(8px); }
+.leaflet-control-layers-expanded { padding: 8px 12px; }
+.leaflet-aquatica-pin { background: none; border: 0; }
+.aq-pin { position: relative; width: 32px; height: 32px; display: grid; place-items: center; cursor: pointer; }
+.aq-pin::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: rgba(110, 231, 249, .35); animation: pin-pulse 2.2s ease-out infinite; }
+.aq-pin-core { position: relative; z-index: 2; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; background: rgba(2, 30, 55, .95); border: 2px solid var(--aqua); box-shadow: 0 2px 10px rgba(0,0,0,.5); transition: transform .2s, border-color .2s; }
+.aq-pin:hover .aq-pin-core, .aq-pin.active .aq-pin-core { transform: scale(1.22); border-color: var(--sand); background: #063a63; }
+.aq-pin.active::before { background: rgba(246, 214, 143, .45); }
+@keyframes pin-pulse { 0% { transform: scale(.8); opacity: .9; } 100% { transform: scale(2.1); opacity: 0; } }
 .map-preview-img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; margin-bottom: 14px; border: 1px solid var(--glass-border); display: block; }
 .map-preview h3 { margin-bottom: 4px; }
 .map-preview p { color: var(--text-dim); font-size: .95rem; }
