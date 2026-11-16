@@ -185,6 +185,126 @@
         "Across 640 enrolled classrooms, student data has flagged leaking storm drains, sparked monthly neighbourhood clean-ups, and brought families directly into watershed conservation."
       ],
       takeaways: ["640 classrooms across 14 countries", "Free open curriculum in 8 languages", "Student citizen-science logs driving local drain repairs"]
+    },
+    {
+      id: "lake-baikal-monitoring",
+      cat: "science",
+      catLabel: "Science & Data",
+      title: "Lake Baikal's Fragile Endemic World: Monitoring Siberia's Deepest Basin",
+      place: "Lake Baikal, Russia",
+      date: "Jan 2026",
+      readTime: "7 min read",
+      author: "Dr. Jonas Weber",
+      avatar: "assets/images/team/jonas.webp",
+      img: "assets/images/world-baikal.webp",
+      summary: "Holding a fifth of Earth's unfrozen surface freshwater, Baikal's unique sponges and seals depend on ultra-low nutrient levels and cold-water turnover.",
+      pull: "Over 80% of Lake Baikal's animal species exist nowhere else on Earth — making shoreline sewage treatment critical.",
+      body: [
+        "At 1,642 metres deep, Lake Baikal is both the oldest and deepest freshwater lake on the planet. Its legendary clarity relies on endemic microscopic crustaceans and freshwater sponges that filter the water column continuously.",
+        "In recent summers, warming surface temperatures and untreated shoreline tourism wastewater have triggered localised filamentous algae blooms along shallow bays, threatening native sponge reefs.",
+        "Long-term thermistor chains and volunteer shoreline water-quality transects help scientists track deep-water mixing and advocate for closed-loop sanitation around every lakeside village."
+      ],
+      takeaways: ["Holds ~20% of Earth's unfrozen surface freshwater", "Over 80% of native species are endemic to Baikal", "Shoreline sanitation upgrades protect native sponge filters"]
+    },
+    {
+      id: "norway-fjord-gear",
+      cat: "field",
+      catLabel: "Field Report",
+      title: "Norway's Deep Fjords: Lifting Derelict Crab Pots in Cold Waters",
+      place: "Geirangerfjord, Norway",
+      date: "Dec 2025",
+      readTime: "5 min read",
+      author: "Noah Fischer",
+      avatar: "assets/images/team/noah.webp",
+      img: "assets/images/world-norway.webp",
+      summary: "Cold, dark fjord waters slow down corrosion — meaning lost traps can keep ghost-fishing cod, crabs, and sea birds for years unless divers retrieve them.",
+      pull: "Every recovered pot is logged by GPS, tagged, and returned to local fishers or recycled into marine-grade rope.",
+      body: [
+        "Steep underwater walls and strong tidal currents in Nordic fjords easily snag buoy lines, leaving heavy wire traps resting on ledges 30 to 60 metres below the surface.",
+        "Working alongside regional dive clubs and commercial fishers, our cold-water recovery teams use ROV scouts and lift-bags to haul derelict pots aboard without disturbing cold-water coral gardens.",
+        "Simple biodegradable cotton escape-cord regulations — which rot open within weeks if a pot is lost — are now paired with an open reporting app for lost gear."
+      ],
+      takeaways: ["Cold-water ROV + diver retrieval protects fjord ledges", "Biodegradable escape cords prevent long-term ghost fishing", "Recovered gear recycled with local port authorities"]
+    },
+    {
+      id: "okavango-flood-pulse",
+      cat: "freshwater",
+      catLabel: "Freshwater",
+      title: "The Okavango Pulse: How Seasonal Floods Sustain an Entire Desert Basin",
+      place: "Okavango Delta, Botswana",
+      date: "Nov 2025",
+      readTime: "7 min read",
+      author: "Marina Okafor",
+      avatar: "assets/images/team/marina.webp",
+      img: "assets/images/world-okavango.webp",
+      summary: "Rain falling in the Angolan highlands takes four months to fan out across the Kalahari — creating a seasonal wetland oasis that recharges aquifers and sustains wildlife.",
+      pull: "The Okavango Delta never reaches the ocean; its entire flood pulse evaporates or sinks into desert groundwater.",
+      body: [
+        "Unlike coastal deltas, the Okavango is an inland alluvial fan. Seasonal floodwaters arrive during Botswana’s dry winter, transforming arid floodplains into a labyrinth of papyrus channels and lagoons.",
+        "Maintaining free-flowing upstream tributaries in the Cubango-Okavango basin is essential. Upstream water diversions or poorly sited dams would shrink the seasonal flood pulse that both pastoral communities and wildlife depend on.",
+        "Transboundary basin agreements backed by satellite inundation mapping help keep this rare hydrological rhythm intact."
+      ],
+      takeaways: ["Four-month hydrological lag from highlands to desert", "Recharges regional groundwater across the Kalahari", "Transboundary river governance protects seasonal floods"]
+    },
+    {
+      id: "patagonia-glacial-sources",
+      cat: "science",
+      catLabel: "Science & Data",
+      title: "Glacial Meltwater in Patagonia: Measuring Tomorrow's River Supply Today",
+      place: "Patagonia, Chile",
+      date: "Oct 2025",
+      readTime: "6 min read",
+      author: "Sofia Reyes",
+      avatar: "assets/images/team/sofia.webp",
+      img: "assets/images/world-patagonia.webp",
+      summary: "As mountain glaciers retreat, rivers initially surge before entering long-term decline. Streamflow gauges help downstream towns plan water security early.",
+      pull: "Protecting high-altitude wetlands and peatlands buffers river flow long after summer snowpack shrinks.",
+      body: [
+        "Across the southern Andes, glacial lakes like Lago Leones feed cold, oxygen-rich rivers that support native fish and rural communities downstream.",
+        "As glaciers thin, watersheds pass ‘peak water’ — a temporary increase in meltwater followed by drier late-summer riverbeds. Continuous stream-gauge telemetry gives municipalities years of lead time to protect headwater peatlands.",
+        "Those spongy alpine wetlands absorb meltwater and release it slowly during dry months, acting as natural reservoirs."
+      ],
+      takeaways: ["Continuous stream-gauge telemetry tracks peak-water shifts", "Alpine peatlands act as natural slow-release reservoirs", "Early data helps downstream towns plan drought resilience"]
+    },
+    {
+      id: "ghana-solar-boreholes",
+      cat: "people",
+      catLabel: "People & Policy",
+      title: "Solar Boreholes in Northern Ghana: Why Maintenance Committees Outlast Hardware",
+      place: "Northern Region, Ghana",
+      date: "Sep 2025",
+      readTime: "6 min read",
+      author: "Grace Mensah",
+      avatar: "assets/images/team/grace.webp",
+      img: "assets/images/proj-wells.webp",
+      summary: "Up to a third of rural handpumps in some regions sit broken within five years. Training paid local mechanics and women-led water committees changes the odds.",
+      pull: "Hardware is the easy part; governance, spare-parts supply chains, and quarterly water testing keep taps running.",
+      body: [
+        "Drilling a borehole takes days, but keeping clean water flowing for twenty years takes local institutions. Across 38 partner communities in Northern Ghana, every Aquatica-funded school water point starts with a locally elected water committee.",
+        "Before construction begins, technicians train community mechanics, stock standardised spare seals and valves in nearby market towns, and set up transparent micro-fee funds for repairs.",
+        "Quarterly E. coli and turbidity checks ensure safe drinking water keeps children in school — especially adolescent girls who otherwise lose hours each day fetching water."
+      ],
+      takeaways: ["38 rural communities with locally managed water points", "21,000 students with reliable safe drinking water", "Quarterly water-quality testing and spare-parts training"]
+    },
+    {
+      id: "coral-bleaching-satellites",
+      cat: "science",
+      catLabel: "Science & Data",
+      title: "Coral Bleaching Alert Systems: Reading Satellite Heat-Stress Maps Early",
+      place: "Maldives & Coral Sea",
+      date: "Aug 2025",
+      readTime: "5 min read",
+      author: "Leo Tanaka",
+      avatar: "assets/images/team/leo.webp",
+      img: "assets/images/threat-bleaching.webp",
+      summary: "Degree Heating Weeks (DHW) let reef managers spot thermal stress weeks before corals turn white — triggering temporary closures and nursery shading.",
+      pull: "When cumulative heat stress crosses 4 °C-weeks, significant coral bleaching becomes likely without rapid local relief.",
+      body: [
+        "Every coral reef has a narrow summer temperature comfort zone. When sea surface temperatures stay even 1 °C above the local maximum monthly mean for several weeks, coral polyps expel their symbiotic zooxanthellae algae.",
+        "By combining open satellite sea-surface temperature feeds with in-situ reef loggers, dive teams receive early alerts before mass bleaching hits.",
+        "During peak heatwaves, teams pause fragment outplanting, deploy temporary shade cloth over shallow nursery tables, and work with dive operators to minimise physical stress on reefs."
+      ],
+      takeaways: ["Satellite Degree Heating Weeks give weeks of early warning", "Nursery shading and paused handling reduce heat-stress mortality", "Open marine telemetry empowers local dive operators"]
     }
   ];
 
