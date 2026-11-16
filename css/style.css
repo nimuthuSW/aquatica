@@ -217,7 +217,17 @@ main { position: relative; z-index: 2; }
 .btn.coral { background: linear-gradient(135deg, #ffb199, var(--coral)); box-shadow: 0 6px 24px rgba(255, 123, 107, .4); }
 
 /* ---------- Hero ---------- */
-.hero { min-height: calc(100vh - 70px); display: grid; place-items: center; text-align: center; padding: 60px 20px 140px; position: relative; }
+.hero { min-height: calc(100vh - 70px); display: grid; place-items: center; text-align: center; padding: 60px 20px 140px; position: relative; overflow: hidden; }
+.hero-photo {
+  position: absolute; inset: 0; z-index: 0;
+  background-size: cover; background-position: center;
+  opacity: .38; filter: saturate(1.1) contrast(1.05);
+  transform: scale(1.03);
+}
+.hero-photo::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(1, 18, 36, .55) 0%, rgba(2, 34, 63, .65) 60%, rgba(2, 34, 63, .95) 100%);
+}
 .hero-inner { max-width: 900px; position: relative; z-index: 3; }
 .hero h1 .shimmer {
   background: linear-gradient(90deg, var(--foam) 0%, var(--aqua) 25%, var(--teal) 50%, var(--aqua) 75%, var(--foam) 100%);
