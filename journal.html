@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Journal &amp; Field Dispatches — Aquatica</title>
+  <meta name="description" content="In-depth field dispatches, conservation research, freshwater case studies and ocean science articles from Aquatica's global teams.">
+  <link rel="canonical" href="https://aquatica.rakkora.org/journal.html">
+  <link rel="preload" as="image" href="assets/images/world-mekong.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aquatica">
+  <meta property="og:title" content="Journal &amp; Field Dispatches — Aquatica">
+  <meta property="og:description" content="In-depth field dispatches, conservation research, freshwater case studies and ocean science articles from Aquatica's global teams.">
+  <meta property="og:url" content="https://aquatica.rakkora.org/journal.html">
+  <meta property="og:image" content="https://aquatica.rakkora.org/assets/images/world-mekong.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Journal &amp; Field Dispatches — Aquatica">
+  <meta name="twitter:description" content="In-depth field dispatches, conservation research, freshwater case studies and ocean science articles from Aquatica's global teams.">
+  <meta name="twitter:image" content="https://aquatica.rakkora.org/assets/images/world-mekong.webp">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.remove("no-js")</script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/journal.js" defer></script>
+</head>
+<body data-max-depth="600">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="hero page-hero">
+      <div class="hero-photo" style="background-image:url('assets/images/world-mekong.webp')" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <span class="eyebrow reveal">Journal</span>
+        <h1 class="reveal" style="--delay:.1s">Field <span class="shimmer">dispatches &amp; stories</span></h1>
+        <p class="lead reveal" style="--delay:.2s">Long-form reporting, scientific notes and lessons from the rivers, wetlands, aquifers and reefs where our crews work.</p>
+      </div>
+      <div class="waves" aria-hidden="true">
+        <svg class="w1" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 60 Q 360 10 720 60 T 1440 60 T 2160 60 T 2880 60 V110 H0Z" fill="#6ee7f9"/></svg>
+        <svg class="w2" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 70 Q 240 30 480 70 T 960 70 T 1440 70 T 1920 70 T 2400 70 T 2880 70 V110 H0Z" fill="#2ec4b6"/></svg>
+        <svg class="w3" viewBox="0 0 2880 110" preserveAspectRatio="none"><path d="M0 85 Q 480 55 960 85 T 1920 85 T 2880 85 V110 H0Z" fill="#02223f"/></svg>
+      </div>
+    </section>
+
+    <section class="section">
+      <div id="featured-slot"></div>
+
+      <div class="section-head reveal">
+        <span class="eyebrow">All articles</span>
+        <h2>Explore the archive</h2>
+      </div>
+      <div class="chips reveal" role="group" aria-label="Filter articles" id="article-filters">
+        <button class="chip" aria-pressed="true" data-filter="all">All</button>
+        <button class="chip" aria-pressed="false" data-filter="field">Field Reports</button>
+        <button class="chip" aria-pressed="false" data-filter="science">Science &amp; Data</button>
+        <button class="chip" aria-pressed="false" data-filter="freshwater">Freshwater</button>
+        <button class="chip" aria-pressed="false" data-filter="people">People &amp; Policy</button>
+      </div>
+      <div class="search-row reveal">
+        <label class="sr-only" for="article-search">Search articles</label>
+        <input type="text" id="article-search" placeholder="Search articles, places, authors…">
+      </div>
+      <div class="grid grid-3" id="article-grid"></div>
+      <p class="empty" id="article-empty" hidden>No articles match — try another topic or keyword.</p>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>

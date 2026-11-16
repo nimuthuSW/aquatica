@@ -95,6 +95,10 @@
     { q: "What causes coral bleaching?", a: ["Too much sunlight on sand", "Corals expelling their algae under heat stress", "Bleach from cleaning products", "Old age"], correct: 1, why: "Stressed by hot water, corals expel the algae that feed and colour them." },
     { q: "Which everyday item sheds microplastics into waterways?", a: ["Cotton T-shirts", "Synthetic fleece jackets", "Wool socks", "Linen sheets"], correct: 1, why: "Synthetic fabrics like polyester fleece shed tiny fibres every wash." },
     { q: "What is a marine ‘dead zone’?", a: ["A shipwreck site", "An area too deep for light", "Water so low in oxygen most life can't survive", "A no-fishing area"], correct: 2, why: "Nutrient runoff feeds algal blooms, whose decay strips oxygen from the water." },
+    { q: "Roughly what share of Earth's oxygen comes from ocean life?", a: ["5%", "20%", "About 50%", "95%"], correct: 2, why: "Marine phytoplankton and ocean plants produce roughly half of Earth's oxygen." },
+    { q: "What percentage of all plastic ever produced has been recycled?", a: ["Less than 10%", "About 35%", "About 60%", "Over 80%"], correct: 0, why: "Less than 10% of all plastic ever made has been recycled — reducing use is essential." },
+    { q: "Why are mangrove forests vital for coastlines?", a: ["They block tides completely", "They buffer storms, filter runoff and store blue carbon", "They turn saltwater into freshwater", "They only grow in deep water"], correct: 1, why: "Mangroves absorb wave energy, trap sediment, shelter fish nurseries and store dense carbon." },
+    { q: "What is ‘virtual water’?", a: ["Water in cloud computing", "The hidden water used to grow food and make goods", "Rainwater before it hits the ground", "Desalinated seawater"], correct: 1, why: "Every meal, T-shirt and phone carries a hidden ‘virtual water’ footprint from production." },
   ];
   const quizBox = document.getElementById("quiz-box");
   let qi = 0, score = 0;
